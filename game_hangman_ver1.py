@@ -26,7 +26,7 @@ class HangMan:
         if hanged_man == 6:
             print('Game over')
         elif hanged_man < 6 and not '_' in result:
-            print('Congratulation, you win. The answer is {}.'.format(''.join(result)))
+            print('Congratulation, you win. The answer is: {}.'.format(''.join(result)))
 
     def __repr__(self):
         return self.keyword
@@ -34,6 +34,7 @@ class HangMan:
         
         
 word1 = input('What word do you want to play: ')
-
 play1 = HangMan(word1)
+for i in range(0, 100):
+    print('Wait for {}!'.format(i))
 play1.play_game()
